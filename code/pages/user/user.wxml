@@ -1,0 +1,5 @@
+<!--pages/user/user.wxml-->
+<text>pages/user/user.wxml</text>
+
+<view bindtap="login">登录</view>
+<view bindtap="option">设置</view>
