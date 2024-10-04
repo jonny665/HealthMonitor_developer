@@ -6,7 +6,8 @@
     "pages/user/user",
     "pages/community/community",
     "pages/diet/diet",
-    "pages/sport/sport"
+    "pages/sport/sport",
+    "pages/option/option"
   ],
   "window": {
     "navigationBarBackgroundColor": "#1afa29",
@@ -14,32 +15,37 @@
     "navigationBarTitleText": "健康监控"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/community/community",
-      "text": "社区",
-      "iconPath": "image/icon/社区.png",
-      "selectedIconPath": "image/icon/选中社区.png"
-    },{
-      "pagePath": "pages/diet/diet",
-      "text": "饮食",
-      "iconPath": "image/icon/饮食.png",
-      "selectedIconPath": "image/icon/选中饮食.png"
-    },{
-      "pagePath": "pages/home/home",
-      "text": "首页",
-      "iconPath": "image/icon/首页.png",
-      "selectedIconPath": "image/icon/选中首页.png"
-    }, {
-      "pagePath": "pages/sport/sport",
-      "text": "运动",
-      "iconPath": "image/icon/运动.png",
-      "selectedIconPath": "image/icon/选中运动.png"
-    }, {
-      "pagePath": "pages/user/user",
-      "text": "我的",
-      "iconPath": "image/icon/我的.png",
-      "selectedIconPath": "image/icon/选中我的.png"
-    }
+    "list": [
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "image/icon/社区.png",
+        "selectedIconPath": "image/icon/选中社区.png"
+      },
+      {
+        "pagePath": "pages/diet/diet",
+        "text": "饮食",
+        "iconPath": "image/icon/饮食.png",
+        "selectedIconPath": "image/icon/选中饮食.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/icon/首页.png",
+        "selectedIconPath": "image/icon/选中首页.png"
+      },
+      {
+        "pagePath": "pages/sport/sport",
+        "text": "运动",
+        "iconPath": "image/icon/运动.png",
+        "selectedIconPath": "image/icon/选中运动.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "image/icon/我的.png",
+        "selectedIconPath": "image/icon/选中我的.png"
+      }
     ]
   },
   "style": "v2",

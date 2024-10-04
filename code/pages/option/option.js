@@ -1,24 +1,23 @@
-// pages/user/user.js
+// pages/option/option.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {
-      avatarUrl: "image\icon\默认头像.png",
-      nickName: '请登录',
-    }
+
   },
-  option(){
+  setuserinfo(){
     wx.navigateTo({
-      url: '/pages/option/option',
+      url: '/pages/index/index',
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+
   },
 
   /**
@@ -53,12 +52,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-    console.log("set")
-    var info=wx.getStorageSync('userInfo') 
-    this.setData({
-      userInfo: info,
-    })
-    wx.stopPullDownRefresh()
+
   },
 
   /**

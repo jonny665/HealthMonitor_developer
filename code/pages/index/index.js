@@ -17,6 +17,13 @@ Page({
       url: '../logs/logs'
     })
   },
+  home() {
+    wx.setStorageSync("userInfo", this.data.userInfo),
+    wx.switchTab({
+      url: '/pages/home/home'
+    })
+    console.log(wx.getStorageSync('userInfo'))
+  },
   onChooseAvatar(e) {
     const { avatarUrl } = e.detail
     const { nickName } = this.data.userInfo

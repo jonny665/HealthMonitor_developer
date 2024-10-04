@@ -1,5 +1,6 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
-
-<view bindtap="login">登录</view>
+<view >
+    <image src="{{userInfo.avatarUrl}}" style="width: 100px; height: 100px;" />
+    <text >{{userInfo.nickName}}</text>
+</view>
 <view bindtap="option">设置</view>
