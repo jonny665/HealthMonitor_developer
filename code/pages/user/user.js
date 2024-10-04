@@ -5,10 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {
-      avatarUrl: "image\icon\默认头像.png",
-      nickName: '请登录',
-    }
+    userInfo: {}
   },
   option(){
     wx.navigateTo({
@@ -19,6 +16,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    var info=wx.getStorageSync('userInfo') 
+    this.setData({
+      userInfo: info,
+    })
   },
 
   /**
