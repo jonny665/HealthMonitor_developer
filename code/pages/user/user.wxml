@@ -3,4 +3,7 @@
     <image src="{{userInfo.avatarUrl}}" style="width: 100px; height: 100px;border-radius: 50px;" />
     <text >{{userInfo.nickName}}</text>
 </view>
+<view >
+     <text >id:{{userInfo.userid}}</text>
+</view>
 <view bindtap="option">设置</view>

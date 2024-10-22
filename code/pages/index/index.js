@@ -7,6 +7,7 @@ Page({
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: '',
+      userid: '0'
     },
     hasUserInfo: false,
     canIUseGetUserProfile: wx.canIUse('getUserProfile'),
@@ -18,6 +19,14 @@ Page({
     })
   },
   home() {
+    wx.login({
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          "userInfo.userid": res.code
+        })
+      }
+    })
     wx.setStorageSync("userInfo", this.data.userInfo),
     wx.switchTab({
       url: '/pages/home/home'
