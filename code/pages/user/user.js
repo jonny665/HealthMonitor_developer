@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    userInfo: {},
+    userid: '0',
   },
   option(){
     wx.navigateTo({
@@ -17,8 +18,10 @@ Page({
    */
   onLoad(options) {
     var info=wx.getStorageSync('userInfo') 
+    var id=wx.getStorageSync('userid')
     this.setData({
       userInfo: info,
+      userid: id,
     })
   },
 
@@ -56,8 +59,10 @@ Page({
   onPullDownRefresh() {
     console.log("set")
     var info=wx.getStorageSync('userInfo') 
+    var id=wx.getStorageSync('userid')
     this.setData({
       userInfo: info,
+      userid: id,
     })
     wx.stopPullDownRefresh()
   },

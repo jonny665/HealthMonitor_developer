@@ -7,7 +7,6 @@ Page({
     userInfo: {
       avatarUrl: defaultAvatarUrl,
       nickName: '',
-      userid: '0'
     },
     hasUserInfo: false,
     canIUseGetUserProfile: wx.canIUse('getUserProfile'),
@@ -20,11 +19,32 @@ Page({
   },
   home() {
     wx.login({
-      success: (res) => {
-        console.log(res)
-        this.setData({
-          "userInfo.userid": res.code
-        })
+      success (res) {
+        if (res.code) {
+          // 发起网络请求
+          wx.request({
+            url:'https://api.weixin.qq.com/sns/jscode2session',
+            data: {
+              appid: 'wxdddeffa822863eb9',
+              secret: '88e1c4c30ff62ea9e1a328894114023c',
+              js_code: res.code,
+              grant_type: 'authorization_code'
+            },
+            success: res => {
+              if (res.data.openid) {
+                console.log('成功获取openid:', res.data.openid); // 成功获取到openid
+                wx.setStorageSync("userid", res.data.openid)
+              } else {
+                console.error('获取openid失败:', res.data.errmsg); // 没有获取到openid，返回错误信息
+              }
+            },
+            fail: err => {
+              console.error('请求失败:', err.errMsg); // 请求失败，返回错误信息
+            }
+          })
+        } else {
+            console.log('登录失败！' + res.errMsg)
+        }
       }
     })
     wx.setStorageSync("userInfo", this.data.userInfo),
@@ -61,5 +81,5 @@ Page({
         })
       }
     })
-  },
+  }
 })

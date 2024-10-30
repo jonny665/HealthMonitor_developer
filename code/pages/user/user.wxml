@@ -4,6 +4,6 @@
     <text >{{userInfo.nickName}}</text>
 </view>
 <view >
-     <text >id:{{userInfo.userid}}</text>
+     <text >id:{{userid}}</text>
 </view>
 <view bindtap="option">设置</view>
