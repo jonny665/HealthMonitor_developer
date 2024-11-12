@@ -1,9 +1,15 @@
 <!--pages/user/user.wxml-->
-<view >
-    <image src="{{userInfo.avatarUrl}}" style="width: 100px; height: 100px;border-radius: 50px;" />
-    <text >{{userInfo.nickName}}</text>
+<view class="wall">
 </view>
-<view >
-     <text >id:{{userid}}</text>
+
+<view class="headimg-div">
+<image class="headimg" src="{{userInfo.avatarUrl}}"></image>
 </view>
-<view bindtap="option">设置</view>
+<view class="nickname-div">
+    <text class="nickname">{{userInfo.nickName}}</text>
+</view>
+<view class="id-div">
+    <text class="id">id:{{userid}}</text>
+</view>
+
+<button bindtap="option">设置</button>

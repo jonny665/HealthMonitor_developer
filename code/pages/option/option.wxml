@@ -1,3 +1,4 @@
 <!--pages/option/option.wxml-->
 <text>pages/option/option.wxml</text>
 <view bindtap="setuserinfo">设置用户信息</view>
+<view bindtap="test">测试</view>

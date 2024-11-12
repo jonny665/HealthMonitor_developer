@@ -1,1 +1,49 @@
-/* pages/user/user.wxss */
+/* pages/me/me.wxss */
+.wall{
+    position: relative;
+    top:-1rpx;
+    width: 100%;
+    height:50rpx;
+    background-color: #1afa29;
+}
+
+
+.headimg-div{
+    position: relative;
+    left: 50%;
+    height: 160rpx;
+    width: 160rpx;
+    top: 80rpx;
+    /*display: block;
+    margin: 80rpx auto;*/
+}
+.headimg{
+    border-radius: 80rpx;
+    height: 160rpx;
+    width: 160rpx;
+    position: relative;
+    left: -50%;
+}
+
+.nickname-div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 100rpx;
+}
+.nickname{
+    display: block;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.id-div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 10rpx;
+}
+.id{
+    display: block;
+    font-size: 24rpx;
+    color: #a0a0a0;
+}
