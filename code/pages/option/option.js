@@ -69,17 +69,8 @@ Page({
 
   },
   test(){
-    const fs = wx.getFileSystemManager()
-    fs.readFile({
-      filePath: `D:\GitHub\HealthMonitor_developer\code\data1\食物热量.csv`,
-      encoding: 'utf8',
-      position: 0,
-      success(res) {
-        console.log(res.data)
-      },
-      fail(res) {
-        console.error(res)
-      }
+    wx.navigateTo({
+      url: '/pages/tempt/tempt',
     })
   }
 })

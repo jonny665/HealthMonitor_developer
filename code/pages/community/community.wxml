@@ -1,2 +1,126 @@
-<!--pages/community/community.wxml-->
-<text>pages/community/community.wxml</text>
+<!--home.wxml-->
+<import src="../templates/components.wxml"/>
+
+
+<!--搜索栏
+ 点击搜索框跳转至search页面-->
+<view class="search-top">
+    <form class="search-form" bindsubmit="searchSubmit">
+    <view  class="search-button"/>
+    <text class="search-hint" bindtap="bindFocus">搜索问题</text>
+      <image src="/image/icon/搜索.png" class="search-icon"></image>
+    </form>
+</view>
+
+
+
+
+
+<!--主体页面-->
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight-31}}px" bindchange="bindChange"> 
+
+    <!-- 推荐 -->  
+    <swiper-item>
+      <scroll-view style="height:{{winHeight-10}}px" scroll-y="true" bindscrolltoupper="scrollToTop"  
+bindscroll="scroll" bindscrolltolower="scrollToBottom"  bindtouchstart="start" bindtouchend="end"  enable-back-to-top="true" class="scoll-box"> 
+      <view >
+      
+      <view wx:if="{{isRefresh}}" class="refresh_root">
+        <image src="/image/icon/loading.gif" class="refresh"></image>
+        <view><text class="isrefresh-text">正在刷新</text></view>
+      </view>
+
+      <view wx:if="{{isRefresh==false}}" class="top-notice">
+      下拉刷新
+      </view>
+
+
+      <view wx:for="{{[1, 2, 3, 4 ,5]}}">
+      <template is="recommend-card" data="{{...card}}" />
+      </view>
+
+      <view class="bottom-notice">
+      上拉加载更多
+      </view>
+
+      </view>
+      </scroll-view>
+    </swiper-item> 
+
+    <!-- 最新 -->  
+    <swiper-item>  
+    <scroll-view style="height:{{winHeight-10}}px" scroll-y="true" bindscrolltoupper="scrollToTop"  
+bindscroll="scroll" bindscrolltolower="scrollToBottom"  bindtouchstart="start" bindtouchend="end"  enable-back-to-top="true" class="scoll-box"> 
+      <view >
+      
+      <view wx:if="{{isRefresh}}" class="refresh_root">
+        <image src="/image/icon/loading.gif" class="refresh"></image>
+        <view><text class="isrefresh-text">正在刷新</text></view>
+      </view>
+
+      <view wx:if="{{isRefresh==false}}" class="top-notice">
+      下拉刷新
+      </view>
+
+
+      <view wx:for="{{[1, 2, 3, 4 ,5]}}">
+      <template is="recommend-card" data="{{...card}}" />
+      </view>
+
+      <view class="bottom-notice">
+      上拉加载更多
+      </view>
+
+      </view>
+      </scroll-view>
+    </swiper-item>  
+
+    <!-- 最热 -->  
+    <swiper-item>
+    <scroll-view style="height:{{winHeight-10}}px" scroll-y="true" bindscrolltoupper="scrollToTop"  
+bindscroll="scroll" bindscrolltolower="scrollToBottom"  bindtouchstart="start" bindtouchend="end"  enable-back-to-top="true" class="scoll-box"> 
+      <view >
+      
+      <view wx:if="{{isRefresh}}" class="refresh_root">
+        <image src="/image/icon/loading.gif" class="refresh"></image>
+        <view><text class="isrefresh-text">正在刷新</text></view>
+      </view>
+
+      <view wx:if="{{isRefresh==false}}" class="top-notice">
+      下拉刷新
+      </view>
+
+
+      <view wx:for="{{[1, 2, 3, 4 ,5]}}">
+      <template is="recommend-card" data="{{...card}}" />
+      </view>
+
+      <view class="bottom-notice">
+      上拉加载更多
+      </view>
+
+      </view>
+      </scroll-view>
+    </swiper-item>
+    
+    <!-- 文章 -->  
+    <swiper-item> 
+    <scroll-view style="height:{{winHeight-10}}px" scroll-y="true">  
+      <view>文章</view>  
+      </scroll-view>
+    </swiper-item>  
+</swiper> 
+
+
+
+<!--顶部导航条-->
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">推荐</view>  
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">最新</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">最热</view>  
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">文章</view>
+</view>  
+
+<!--底部阴影 -->
+<template is="shadow"/>
+<!--<canvas class="canvas" style="width: {{winWidth}}px; height: 40px;" canvas-id="firstCanvas" disable-scroll="true" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></canvas>-->

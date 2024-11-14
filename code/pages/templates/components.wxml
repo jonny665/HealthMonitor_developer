@@ -1,0 +1,59 @@
+<!--自定义组件-->
+
+
+
+
+
+<!--推荐卡片-->
+<template name="recommend-card" >
+  <view class="card">
+    <image class="headimg" src="{{imgpath}}"></image>
+    <view class="ans-info">
+        <text class="nickname"> {{nickname}}</text>
+        <text class="time">{{time}}</text>
+    </view>
+    <text class="question-collapse"> {{question}} </text>
+    <text class="answer-collapse"> {{answer}} </text>
+    <text class="interaction">{{detail}}</text>
+  </view>
+</template>
+
+<!--热门卡片-->
+<template name="hot-card">
+  <view class="card">
+    <image class="headimg" src="{{imgpath}}"></image>
+    <view class="ans-info">
+        <text class="nickname"> {{nickname}}</text>
+        <text class="time">{{time}}</text>
+    </view>
+    <text class="question-collapse"> {{question}} </text>
+    <text class="answer-collapse"> {{answer}} </text>
+    <text class="interaction">{{detail}}</text>
+  </view>
+</template>
+
+
+<!--问题详情页面 问题卡片-->
+<template name="question-card">
+  <view class="card">
+    <image class="headimg" src="{{imgpath}}"></image>
+    <view>
+      <text class="nickname">昵称</text>
+      <text class="time">1月前</text>
+    </view>
+    <view wx:if="{{followed}}"></view>
+    <text class="question-expand"> {{question}} </text>
+    <text class="{{ 'detail-' + (isExpanded ? 'expand' : 'collapse') }}"
+>{{detail}}</text>
+    <text bintap="expand">展开</text>
+
+
+
+  </view>
+</template>
+
+
+<!--阴影-->
+<template name="shadow">
+<!-- <image class="shadow" src="/image/material/shadow.png"></image> -->
+</template>

@@ -1,8 +1,8 @@
 <view class="container">
 
 <view class="middle-info">
-  <view style='font-size:25px'>今日热量</view>
   <view style='font-size:45px;color:#1afa29;'>{{heat}}卡路里</view>
+  <view style='font-size:15px'>今日热量</view>
 </view>
 
   <view class="bottom-info">
@@ -15,7 +15,7 @@
         </view>
       </picker>
     </view>
-    <view style='width:100px;'>{{array[index][1]}}cal</view>
+    <view style='width:100px;'>{{array[index][1]}}</view>
     <view><image src="/image/icon/right.png" mode="aspectFit" style='width:30px; height:30px;'></image></view>
   </view>
 </view>

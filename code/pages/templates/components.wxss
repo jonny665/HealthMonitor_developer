@@ -1,0 +1,82 @@
+.card{
+    position: relative;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+    background-color: #fff; 
+    border-bottom: 1rpx solid #e5e5e5;
+    
+}
+.headimg{
+    position: absolute;
+    top: 28rpx;
+    left: 28rpx;
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 30rpx;
+}
+.nickname{
+    display: block;
+    font-size:28rpx;
+    color: #666;
+    margin-left: 100rpx;
+    margin-top: 5rpx;
+}
+.time{
+    display: block;
+    font-size:24rpx;
+    color: #a0a0a0;
+    margin-left: 100rpx;
+    margin-top: -5rpx;
+}
+.question-collapse{
+    font-size: 32rpx;
+    font-weight: bold;
+    margin:15rpx 30rpx 0rpx 30rpx;
+    display:-webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.question-expand{
+    display: block;
+    font-size: 32rpx;
+    font-weight: bold;
+    margin:15rpx 30rpx 0rpx 30rpx;
+}
+.answer-collapse{
+    display: block;
+    font-size: 30rpx;
+    color:#666;
+    margin:15rpx 30rpx 0rpx 30rpx;
+    white-space: nowrap;
+    overflow: hidden;
+	text-overflow: ellipsis;
+}
+.answer-expand{
+    display: block;
+    font-size: 30rpx;
+    color:#000;
+    margin:15rpx 30rpx 0rpx 30rpx;
+}
+.interaction{
+    display: block;
+    text-align: right;
+    margin-left:30rpx;
+    margin-right:30rpx;
+    margin-top:15rpx;
+    font-size: 26rpx;
+    color:#a0a0a0;
+}
+
+
+
+
+
+
+.shadow{
+    position: fixed;
+    bottom: -50rpx;
+    height: 100rpx;
+    width: 100%;
+    opacity: 3%;
+}

@@ -7,7 +7,8 @@
     "pages/community/community",
     "pages/diet/diet",
     "pages/sport/sport",
-    "pages/option/option"
+    "pages/option/option",
+    "pages/tempt/tempt"
   ],
   "window": {
     "navigationBarBackgroundColor": "#1afa29",
