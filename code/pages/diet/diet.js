@@ -6,6 +6,7 @@ Page({
    */
   data: {
     array: [
+      // 食物热量数据
       ["牛奶",58],
       ["馒头",234],
       ["米饭",123],
@@ -19,12 +20,14 @@ Page({
     btnColor:"#1afa29",
     heat:0,
   },
+  // 官网抄的
   bindPickerChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       index: e.detail.value
     })
   },
+  // 按钮，修改今日热量
   signBtn(){
     var that=this
     var heat_=that.data.heat + that.data.array[that.data.index][1];

@@ -1,5 +1,5 @@
 <view class="container">
-
+  <!-- 热量显示 -->
 <view class="middle-info">
   <view style='font-size:25px'>今日热量</view>
   <view style='font-size:45px;color:#1afa29;'>{{heat}}卡路里</view>
@@ -9,6 +9,7 @@
   <view style='font-size:16px; color:darkgray;'>今日摄食</view>
   <view class="item" style='margin-top:20px;'>
     <view class="section" style='width: 150px;height:70px'>
+      <!-- 选择食物 -->
       <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
         <view class="picker">
           {{array[index][0]}}
@@ -19,6 +20,7 @@
     <view><image src="/image/icon/right.png" mode="aspectFit" style='width:30px; height:30px;'></image></view>
   </view>
 </view>
+<!-- 增加热量按钮 -->
 <button bindtap="signBtn" class="yellow-btn"  style='margin-top:30px;background-color:{{btnColor}}; font-size:18px' > {{sign}} </button>
 
 </view>

@@ -9,6 +9,7 @@ Page({
       nickName: '',
     },
     hasUserInfo: false,
+    // 用户资料获取许可
     canIUseGetUserProfile: wx.canIUse('getUserProfile'),
     canIUseNicknameComp: wx.canIUse('input.type.nickname'),
   },
@@ -25,6 +26,7 @@ Page({
           wx.request({
             url:'https://api.weixin.qq.com/sns/jscode2session',
             data: {
+              // appid和秘钥，建议用自己的
               appid: 'wxdddeffa822863eb9',
               secret: '88e1c4c30ff62ea9e1a328894114023c',
               js_code: res.code,
@@ -47,12 +49,15 @@ Page({
         }
       }
     })
+    // 全局储存
     wx.setStorageSync("userInfo", this.data.userInfo),
+    // 跳转
     wx.switchTab({
       url: '/pages/home/home'
     })
     console.log(wx.getStorageSync('userInfo'))
   },
+  // 选头像
   onChooseAvatar(e) {
     const { avatarUrl } = e.detail
     const { nickName } = this.data.userInfo
@@ -61,6 +66,7 @@ Page({
       hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
     })
   },
+  // 选昵称
   onInputChange(e) {
     const nickName = e.detail.value
     const { avatarUrl } = this.data.userInfo

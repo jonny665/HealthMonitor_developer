@@ -1,15 +1,17 @@
 <!--pages/user/user.wxml-->
 <view class="wall">
 </view>
-
+<!-- 头像 -->
 <view class="headimg-div">
 <image class="headimg" src="{{userInfo.avatarUrl}}"></image>
 </view>
+<!-- 用户名 -->
 <view class="nickname-div">
     <text class="nickname">{{userInfo.nickName}}</text>
 </view>
+<!-- id -->
 <view class="id-div">
     <text class="id">id:{{userid}}</text>
 </view>
-
+<!-- 设置按钮 -->
 <button bindtap="option">设置</button>
