@@ -28,3 +28,40 @@
     width:200px;
     
   }
+
+  .search-top{
+    position: fixed;
+    /* background-color: #1afa29; */
+    top: -1rpx;
+    height: 75rpx;
+    width: 60%
+}
+.search-form{
+    position: fixed;
+    width: 60%;
+}
+.search-button{
+    height:60rpx;
+    background-color: #eff2f5;
+    border:none;
+    border-radius: 30rpx;
+    margin:7rpx 30rpx 0rpx 30rpx;
+    padding-left: 60rpx;
+    padding-right: 30rpx;
+    font-size: 28rpx;
+    color: #a0a0a0;
+}
+.search-hint{
+    position: fixed;
+    top:17rpx;
+    left:90rpx;
+    font-size: 28rpx;
+    color: #a0a0a0;
+}
+.search-icon{
+    position: fixed;
+    left: 40rpx;
+    top:12rpx;
+    width: 50rpx;
+    height: 50rpx;
+}

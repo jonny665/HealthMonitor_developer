@@ -5,7 +5,51 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    heat:0,
+    sport:0,
+    tar:0,
+    friendsdata:[
+      {
+      avatar:'image\icon\默认头像.png',
+      nickName:'wu',
+      steps:19143,
+      likes:456,
+      grade:3,
+      namecode:13811111111
+       },
+      {
+      avatar:'image\icon\默认头像.png',
+      nickName:'zzz',
+      steps:15843,
+      likes:44,
+      grade:56,
+      namecode:13844444444
+       },
+      {
+      avatar:'image\icon\默认头像.png',
+      nickName:'wwx',
+      steps:8843,
+      likes:44,
+      grade:56,
+      namecode:13844444444
+       },
+      {
+      avatar:'image\icon\默认头像.png',
+      nickName:'22',
+      steps:8323,
+      likes:44,
+      grade:56,
+      namecode:13844444444
+       },
+      {
+      avatar:'image\icon\默认头像.png',
+      nickName:'wudong',
+      steps:1843,
+      likes:44,
+      grade:56,
+      namecode:13844444444
+       }
+  ],
   },
 
   /**

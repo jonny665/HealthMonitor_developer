@@ -7,6 +7,13 @@
 
   <view class="bottom-info">
   <view style='font-size:16px; color:darkgray;'>今日摄食</view>
+  <view class="search-top">
+    <form class="search-form">
+    <view  class="search-button"/>
+    <text class="search-hint" bindtap="search">搜索</text>
+      <image src="/image/icon/搜索.png" class="search-icon"></image>
+    </form>
+</view>
   <view class="item" style='margin-top:20px;'>
     <view class="section" style='width: 150px;height:70px'>
       <!-- 选择食物 -->

@@ -35,6 +35,9 @@ Page({
       heat: heat_
     })
     },
+  search(){
+    var that=this
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,2 +1,27 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="middle-info">
+  <view style='font-size:35px;color:#ffffff;'>{}</view>
+  <view style='font-size:45px;color:#1afa29;'>今日热量{{heat}}卡路里</view>
+  <view style='font-size:25px;color:#ffffff;'>{}</view>
+  <view style='font-size:45px;color:#1afa29;'>月跑量{{sport}}卡路里</view>
+  <view style='font-size:15px'> 目标{{tar}}天 </view>
+  <view style='font-size:45px;color:#ffffff;'>{}</view>
+</view>
+
+<view style='font-size:25px'> 排名 </view>
+<block wx:for="{{friendsdata}}">
+<view class="friendsdata">
+	<view class="infobox" data-namecode="{{item.namecode}}">
+		<text class="order_num" wx:if="{{index <100}}">{{index+1}}</text>
+		<text class="order_num font_small" wx:else>{{index}}</text>
+		<text class="nickname">{{item.nickName}}</text>
+	</view>
+  <view class="databox">
+  <text class="steps stepsgreen" wx:if="{{item.steps < 10000}}">{{item.steps}}</text>
+  <text class="steps stepsyellow" wx:else>{{item.steps}}</text>
+  <view class="likebox">
+    <text class="likes_num">likes {{item.likes}}</text>
+  </view>
+  </view>
+</view>
+</block>
